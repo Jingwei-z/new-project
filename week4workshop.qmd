@@ -1,0 +1,42 @@
+---
+title: "Week4_workshop"
+format: html
+editor: visual
+---
+
+```{r}
+library(ggplot2)
+library(palmerpenguins)
+```
+
+
+1. fig-cap is use to getting the number
+2. tbl-name is for tables
+
+chunk set as echo : true;
+
+lst-label:lst-pegient-code :this is use for the commonts to explain and describe for this plot or table.
+
+session:
+## Data Cleaning {#sec-cleaning}
+
+See Section @sec-cleaning for details on how the data was prepared.
+
+```{r}
+#| label: fig-bill
+#| fig-cap: "Bill length vs flipper length"
+ggplot(penguins, aes(x = flipper_length_mm, y = bill_length_mm)) + geom_point()
+```
+
+Figure @fig-bill shows the relationship between flipper length and bill length.
+
+```{r}
+#| label: tbl-summary
+#| tbl-cap: "Summary statistics of the penguins dataset"
+knitr::kable(summary(penguins))
+```
+
+See Table @tbl-summary for summary statistics of the dataset.
+
+
+
